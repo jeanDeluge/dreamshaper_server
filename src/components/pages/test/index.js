@@ -1,0 +1,5 @@
+export {default as TestVoice} from './choose_aritist_voice'
+export {default as TestUploadSong } from './upload_my_song' 
+export {default as TestResult } from './result' 
+export {default as TestUploadFace } from './set_my_album' 
+export {default as SelectSong } from './select_songs' 
