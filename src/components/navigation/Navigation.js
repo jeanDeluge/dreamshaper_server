@@ -39,13 +39,14 @@ function Navigation(){
                 </div>
             </div>
         </nav>
-        <container >
-            <div className="bg-blue-700 overflow-y-auto no-scrollbar">
+        <container className="flex bg-blue-700">
+            <div className="bg-white m-auto max-w-screen-xl h-[860px] w-full overflow-y-auto no-scrollbar">
                 <Routes>
                     <Route index path={RouteList.Main.path} element={<RouteList.Main.Component/>} />
                     <Route>
                         <Route path={RouteList.Test.path} element={<RouteList.Test.Component/>} />
                         <Route path={RouteList.Voice.path} element={<RouteList.Voice.Component/>}/>
+                        <Route path={RouteList.Result.path} element={<RouteList.Result.Component/>}/>
                     </Route>
                 </Routes>
             </div>
