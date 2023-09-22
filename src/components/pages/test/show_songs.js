@@ -5,14 +5,14 @@ import artist from "../../../data/artist_song.json"
 function Main(){
     const artist_list = artist.artists
     const id = useParams()["id"]
-    const filename = useParams()["song_id"]
+    const song_id = useParams()["song_id"]
     
-    const url = `http://127.0.0.1:8000/singer/${id}/${filename}`
+    const url = `${process.env.REACT_APP_AWS_API}/${id}/${song_id}.wav`
     return(
         <>
             <img src={artist_list[id-1].image} width={"300px"} className='m-auto'/>
             <div className='max-w-screen w-5/6 m-10 m-auto'>
-                <audio controls>
+                <audio controls className='m-auto'>
                     <source src={url} type="audio/mp3"/>
                 </audio>
             </div>
