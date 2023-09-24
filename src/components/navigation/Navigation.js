@@ -46,6 +46,7 @@ function Navigation(){
                     <Route>
                         <Route path={RouteList.Test.path} element={<RouteList.Test.Component/>} />
                         <Route path={RouteList.Voice.path} element={<RouteList.Voice.Component/>}/>
+                        <Route path={RouteList.Draw.path} element={<RouteList.Draw.Component />} />
                         <Route path={RouteList.Result.path} element={<RouteList.Result.Component/>}/>
                     </Route>
                 </Routes>
