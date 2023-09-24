@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Spinner from '../../spinner/Spinner'
 import axios from 'axios';
 import artist from "../../../data/artist_song.json";
+import { v4 } from 'uuid'
 
 function Main() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function Main() {
   const id = useParams()["id"];
 
   const song_list = artist_list[id - 1].song_list;
-  const song_id = song_list.length;
+  const song_id = v4()
 
   const handleFileChange = (e) => {
     setMusic(e.target.files[0]);
@@ -32,15 +33,17 @@ function Main() {
       
 
       const formData = new FormData();
-      formData.append('music', music);
-      formData.append('singer', id)
-      await axios.post("http://localhost:8000/get_music", formData, {
+      formData.append('audio_file', music);
+      formData.append('song_id', song_id)
+      formData.append('singer_id', id)
+      
+      await axios.post("http://172.30.1.45:5000/convert", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       }).then(response => {
-        const filename = response.data["result"]
-        navigate(`/service/${id}/result/${filename}`);
+        console.log(response, song_id)
+        navigate(`/service/${id}/result/${song_id}`);
       });
     } catch (e) {
       console.error(e);
