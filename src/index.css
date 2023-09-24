@@ -22,6 +22,12 @@
               transform: rotate(360deg);
           }
       }
+      
+      .font_acumin {
+        font-family: "acumin-pro", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
 
     }
   }
