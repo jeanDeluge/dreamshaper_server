@@ -1,4 +1,4 @@
-import { Main } from '../components/pages';
+import { Main, SignIn, SignUp } from '../components/pages';
 import { TestResult, TestUploadFace, TestVoice, SelectSong, Result } from '../components/pages/test';
 
 const ROUTE_PATH_LIST = {

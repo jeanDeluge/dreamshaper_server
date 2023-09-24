@@ -17,7 +17,7 @@ function SignIn() {
     if(token){
       navigate('/')
     }
-  })
+  },[])
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordMessage, setPasswordMessage] = useState("")
@@ -43,7 +43,7 @@ function SignIn() {
       formData.append("username", user.email)
       formData.append("password", user.password)
 
-      await axios.post('http://localhost:8000/login', formData)
+      await axios.post('http://0.0.0.0:8000/login', formData)
                         .then(response =>{
                             sessionStorage.setItem('token', response.data["access_token"])
                             sessionStorage.setItem('name', response.data["name"])
