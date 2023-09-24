@@ -26,7 +26,7 @@ function SignUp() {
     if(setToken){
       navigate('/')
     }
-  },[])
+  })
 
   const onChangePasswordConfirm = (e) => {
     const currentPasswordConfirm = e.target.value;

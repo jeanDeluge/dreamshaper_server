@@ -37,13 +37,12 @@ function Main() {
       formData.append('song_id', song_id)
       formData.append('singer_id', id)
       
-      await axios.post(`${process.env.REACT_APP_AI_APP}/convert`, formData, {
+      await axios.post("http://172.30.1.45:5000/convert", formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       }).then(response => {
         console.log(response, song_id)
-        window.location.reload()
         navigate(`/service/${id}/result/${song_id}`);
       });
     } catch (e) {

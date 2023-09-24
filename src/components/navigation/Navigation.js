@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from "react";
+import React from "react";
 import { RouteList } from "../../constant"
 import { Route, Routes } from "react-router-dom";
 import { MyMenu, Sign } from ".";

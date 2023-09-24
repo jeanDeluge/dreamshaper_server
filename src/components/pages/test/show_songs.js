@@ -8,6 +8,9 @@ function Main(){
     const song_id = useParams()["song_id"]
     
     const url = `${process.env.REACT_APP_AWS_API}/${id}/${song_id}.wav`
+
+    console.log(url)
+    
     return(
         <>
             <img src={artist_list[id-1].image} width={"300px"} className='m-auto'/>
