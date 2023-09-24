@@ -1,5 +1,5 @@
-import { Main, SignIn, SignUp } from '../components/pages';
-import { TestResult, TestVoice, SelectSong, Result } from '../components/pages/test';
+import { Main } from '../components/pages';
+import { TestResult, TestUploadFace, TestVoice, SelectSong, Result } from '../components/pages/test';
 
 const ROUTE_PATH_LIST = {
     "Main": {path: '/', Component: Main, label: 'Main'},
@@ -8,7 +8,7 @@ const ROUTE_PATH_LIST = {
     "Result": {path: '/service/:id/result/:song_id', Component: Result, label: "result" },
     "SignIn": {path: '/signin', Component: SignIn, label: "signin" },
     "SignUp": {path: '/signup', Component: SignUp, label: "signup" },
-    "MakeAlbum" : {path: "/draw", Component: SignIn, label: "album" }
+    "Draw": {path: '/service/:id/draw', Component: TestUploadFace, label: "draw" },
 };
 
 export default ROUTE_PATH_LIST;
