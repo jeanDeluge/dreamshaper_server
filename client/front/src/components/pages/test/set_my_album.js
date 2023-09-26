@@ -142,8 +142,9 @@ function CanvasDrawing() {
     formdata.append("image", blob)
 
     await axios.post(`${process.env.REACT_APP_AI_API}/draw`, formdata, config).then(response=>{
-      sessionStorage.setItem("gen_image_file", response.data["image"])
-      navigate(`service/${id}/result`)
+      const url =  `${process.env.REACT_APP_AWS_API}/${response.data["image"]}`
+      sessionStorage.setItem("gen_image_file", url)
+      navigate(`/service/${id}/result`)
 
     })
   };

@@ -10,9 +10,9 @@ function Main(){
 
     return(
         <>
-        <div className='inline-flex h-full'>
+        <div className='flex m-auto h-full flex-col'>
             <div>
-                <img src={image} />
+                <img src="https://picsum.photos/200" />
             </div>
             <div>
                 <audio controls>
