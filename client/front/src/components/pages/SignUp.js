@@ -70,11 +70,18 @@ function SignUp() {
     }
     try {
       setUser(user.username = username, user.email = email, user.password = password)
-      const token = await axios.post(`${process.env.REACT_APP_BACK}/register`, user);
+      const token = await axios.post(`${process.env.REACT_APP_BACK}/register`, user).then(response =>{
+        if(email =="chlgks@chlgks.chlgks"){
+          sessionStorage.setItem("admin", true)
+        }
+      })
 
       sessionStorage.setItem('token', token)
       window.location.href = '/'; // 홈으로 이동
       window.location.reload();
+
+
+
     } catch (error) {
       console.error('Error registering user:', error);
     }

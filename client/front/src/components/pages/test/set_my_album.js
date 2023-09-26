@@ -7,7 +7,9 @@ function CanvasDrawing() {
   const navigate = useNavigate()
   const id = useParams()["id"]
   const canvasRef = useRef(null);
-  
+  const isadmin = sessionStorage.getItem("admin")
+
+
   const [drawing, setDrawing] = useState(false);
   const [position, setPosition] = useState(null)
   const [image, setImage] = useState(null);
@@ -16,8 +18,8 @@ function CanvasDrawing() {
   const [strokeRadius, setStokeRaudius] = useState(10)
 
   useEffect(() => {
-    const canvas = canvasRef.current;
 
+    const canvas = canvasRef.current;
     // 이미지 로딩 후 캔버스에 그림을 그립니다.
     if (image) {
 
@@ -167,8 +169,10 @@ function CanvasDrawing() {
           <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">선 굵기</label>
             <input type="text" onChange={handleStrokeWidth} placeholder='선 굵기를 입력하세요' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
           </div>
+        {isadmin ? 
         <button type="button" onClick={handleDownload} className="text-white my-10 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">이미지 생성</button>
-  
+          : <button disabled className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" > Submit</button>
+          }
       </div>
     </div>
 

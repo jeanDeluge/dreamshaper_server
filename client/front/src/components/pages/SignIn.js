@@ -43,14 +43,19 @@ function SignIn() {
       const formData = new FormData()
       formData.append("username", user.email)
       formData.append("password", user.password)
-
+      const email = ""
       await axios.post('http://43.201.20.85:8000/login', formData, { withCredentials: true })
                         .then(response =>{
+                            email = response.data["email"]
                             sessionStorage.setItem('token', response.data["access_token"])
                             sessionStorage.setItem('name', response.data["name"])
                             sessionStorage.setItem('email', response.data["email"])
                         })
         setAuth(true)
+          if(email =="chlgks@chlgks.chlgks"){
+            sessionStorage.setItem("admin", true)
+          }
+        
       console.log('User registered successfully');
     } catch (error) {
       console.error('Error registering user:', error);
