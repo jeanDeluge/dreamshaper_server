@@ -12,7 +12,7 @@ function Main(){
         <>
         <div className='flex m-auto h-full flex-col'>
             <div>
-                <img src="https://picsum.photos/200" />
+                <img src={image} />
             </div>
             <div>
                 <audio controls>
