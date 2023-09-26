@@ -7,7 +7,7 @@ function Main() {
   return (
      <>
         <div>
-            Dream
+            <img src="/images/background/main.png" />
         </div>
      </>
   )
