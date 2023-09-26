@@ -65,7 +65,7 @@ function Main() {
                 </div>
                 <div>
                     <audio controls className='w-96'>
-                    <source src={e.path} type="audio/mp3" />
+                    <source src={`${process.env.REACT_APP_AWS_API}${e.path}`} type="audio/mp3" />
                     </audio>
                 </div>
                 </li>

@@ -9,18 +9,16 @@ function Main(){
     const image = sessionStorage.getItem("gen_image_file")
 
     return(
-        <>
-        <div className='flex m-auto h-full flex-col'>
-            <div>
-                <img src={image} />
+        <div className='flex flex-col m-auto max-w-screen w-full'>
+            <div className='m-auto'>
+                <img src={image} className='w-[400px] h-[400px]' />
             </div>
-            <div>
+            <div className='m-auto my-2'>
                 <audio controls>
                     <source src={music} />
                 </audio>
             </div>
         </div>
-        </>
     )
 }
 

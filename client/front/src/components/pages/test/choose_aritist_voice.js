@@ -29,9 +29,10 @@ function ArtistList(){
                             </p>
                         </p>
                         <Link to={`/service/${e.id}`}>
+                            {e.id === 8 ? <Button disabled><p>Select</p></Button> :
                             <Button>
                             <p>Select</p>
-                            </Button>
+                            </Button>}
                         </Link>
 
                     </Card>
