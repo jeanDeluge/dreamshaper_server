@@ -43,7 +43,7 @@
              "path": "/4/sdh_love_yourself.wav"}, 
              {"id": 2,
              "name": "Summer",
-             "path": "/4/sdh_summer.mp3"}] },
+             "path": "/4/sdh_summer.wav"}] },
     { "id":5,"name": "에일리", "image": "/images/ailee.jpg", 
         "song_list": [
             {"id": 1,
