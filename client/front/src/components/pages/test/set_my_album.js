@@ -101,7 +101,7 @@ function CanvasDrawing() {
     const context = canvasRef.current.getContext('2d')
 
     if (context) {
-      context.strokeStyle = "black"
+      context.strokeStyle = "white"
       context.lineJoin = 'round'
       context.lineWidth = strokeRadius
 
