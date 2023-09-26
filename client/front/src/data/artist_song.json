@@ -1,0 +1,23 @@
+{
+    "artists": [
+    { "id":1, "name": "IU", "image": "/images/IU.webp", 
+        "song_list": [
+            {"id": 1,
+             "name": "소주한잔",
+             "path": "/songs/IU/soju."}, 
+             {"id": 2,
+             "name": "INVU",
+             "path": "/songs/IU/soju."},
+             {"id": 3,
+             "name": "Feel My Rhythm",
+             "path": "/songs/IU/soju."}] }, 
+    { "id":2,"name": "박정현", "image": "/images/jeonghyeon.jpg", 
+        "song_list": [] },
+    { "id":3,"name": "성시경", "image": "/images/sungsigyeong.jpg", 
+        "song_list": [] },
+    { "id":4,"name": "서동현", "image": "/images/seodonghyeon.jpg", 
+        "song_list": [] },
+    { "id":5,"name": "개발중", "image": "/images/ready.png", 
+        "song_list": [] }
+    ]
+}

@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .transferent-scrollbar::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      .vinyl_spinner {
+        width: 200px; /* 이미지의 원하는 너비로 조절하세요 */
+        height: 200px; /* 이미지의 원하는 높이로 조절하세요 */
+        position: relative;
+        margin: 0 auto;
+        animation: rotate_image 6s linear infinite;
+      }
+      @keyframes rotate_image{
+          100% {
+              transform: rotate(360deg);
+          }
+      }
+      
+      .font_acumin {
+        font-family: "acumin-pro", sans-serif;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+    }
+  }

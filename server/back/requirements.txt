@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+passlib
+PyJWT
+datetime
+motor
+bcrypt
+python-multipart
