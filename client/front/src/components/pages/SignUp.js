@@ -70,7 +70,7 @@ function SignUp() {
     }
     try {
       setUser(user.username = username, user.email = email, user.password = password)
-      const token = await axios.post('http://localhost:8000/register', user);
+      const token = await axios.post(`${process.env.REACT_APP_BACK}/register`, user);
 
       sessionStorage.setItem('token', token)
       window.location.href = '/'; // 홈으로 이동
